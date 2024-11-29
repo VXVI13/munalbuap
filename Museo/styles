@@ -1,0 +1,63 @@
+body {
+    /* Importación de fuentes */
+@font-face {
+    font-family: 'Binomic Semi Bold';
+    src: url('fonts/Binomic-SemiBold.woff2') format('woff2'),
+         url('fonts/Binomic-SemiBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Maestrale Pro';
+    src: url('fonts/MaestralePro.woff2') format('woff2'),
+         url('fonts/MaestralePro.woff') format('woff');
+}
+
+/* Tipografía general */
+body {
+    font-family: 'Maestrale Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Menú de navegación */
+.navbar-dark .navbar-nav .nav-link {
+    font-family: 'Binomic Semi Bold', sans-serif;
+    font-size: 16px;
+    margin: 0 10px;
+    color: #fff !important;
+    text-transform: uppercase;
+}
+
+/* Logo del menú */
+.navbar-brand img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+/* Centrado del menú */
+.navbar-nav {
+    justify-content: center;
+}
+    font-family: 'Binomic', semi bold;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+img {
+    max-height: 300px;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}

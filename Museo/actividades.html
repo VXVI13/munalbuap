@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades - Museo Nacional de Arte</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="stylepub.css" rel="stylesheet">
+</head>
+<style>
+     /* Estilo para el banner principal */
+     .portada {
+            position: center;
+            background: url('images/juchitan.png') no-repeat center center/cover; /* Imagen de fondo */
+            height: 100vh; /* Ocupa toda la altura de la ventana */
+            color: white; /* Texto blanco */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Fondo translúcido oscuro sobre la imagen */
+        .portada::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo negro translúcido */
+            z-index: 1; /* Por debajo del contenido */
+        }
+
+        /* Contenedor del contenido */
+        .contenido-portada {
+            position: center;
+            z-index: 2; /* Por encima del fondo translúcido */
+            text-align: center;
+        }
+
+        /* Título principal */
+        .titulo-medio h1 {
+            font-size: 3rem; /* Tamaño del texto */
+            font-family: 'SC pronav', sans-serif; /* Usar fuente personalizada */
+            margin-bottom: 1rem;
+            position: center;
+        }
+
+        /* Subtítulo */
+        .titulo-medio p {
+            font-size: 1.2rem;
+            margin: 0 auto; /* Centrar texto */
+            max-width: 600px; /* Limitar el ancho */
+        }
+
+        /* Botones */
+        .titulo-medio .btn {
+            font-size: 1rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px; /* Botones redondeados */
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* Hover en botones */
+        .titulo-medio .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Estilo para el pie de página */
+        footer {
+            background-color: #f4f4f4;  /* Gris claro */
+            color: black;  /* Color de texto negro */
+            padding: 2rem 0;
+        }
+        footer p {
+            margin: 0;
+        }
+        footer img {
+            height: 30px;
+            margin: 0 10px;
+        }
+</style>
+<body class="bg-dark text-white">
+    <nav class="navbar navbar-expand-lg navbar-index">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/logo-museo.png" alt="Logo Museo" style="height: 50px; margin-right: 15px;" >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="visita.html">Visita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="exhibiciones.html">Exhibiciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="actividades.html">Actividades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="publicaciones.html">Publicaciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="conocemas.html">Conoce más</a></li>
+                    <li class="nav-item"><a class="nav-link" href="apoya.html">Apoya</a></li>
+                </ul>
+            </div> 
+        </div>
+    </nav>
+
+    <!-- Título de Actividades -->
+    <section class="container my-5">
+        <h1 class="text-center display-4 text-warning fw-bold">MÓDULOS INTERACTIVOS</h1>
+        <p class="text-center">¡Munal+Educa te invita a enriquecer tu visita a nuestras exposiciones con actividades didácticas!</p>
+        <p class="text-center text-muted">Te esperamos de martes a domingo, de 11 a 15 h. Encuentra los módulos en la parte exterior de nuestras exposiciones temporales.</p>
+    </section>
+
+    <!-- Formulario -->
+    <section class="container bg-light text-dark p-5 rounded">
+        <h3>REGÍSTRATE AQUÍ</h3>
+        <form>
+            <div class="mb-3">
+                <label for="actividad" class="form-label">Actividad a realizar</label>
+                <input type="text" class="form-control" id="actividad" placeholder="Ejemplo: Pintura, Escultura">
+            </div>
+            <div class="mb-3">
+                <label for="fecha" class="form-label">Fecha y hora</label>
+                <input type="text" class="form-control" id="fecha" placeholder="Selecciona fecha y hora">
+            </div>
+            <div class="mb-3">
+                <label for="personas" class="form-label">Número de personas</label>
+                <select id="personas" class="form-select">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="persona1" class="form-label">Persona uno</label>
+                <input type="text" class="form-control" id="persona1">
+            </div>
+            <button type="submit" class="btn btn-warning">Ver más</button>
+        </form>
+    </section>
+
+    <!-- Actividades -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/act1.jpeg" class="card-img-top" alt="Cerámica">
+                    <div class="card-body">
+                        <h5 class="card-title">Pinta tu pieza de cerámica</h5>
+                        <a href="#" class="btn btn-primary">Acerca de</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/act2.jpeg" class="card-img-top" alt="Escultura">
+                    <div class="card-body">
+                        <h5 class="card-title">Escultura para principiantes</h5>
+                        <a href="#" class="btn btn-primary">Acerca de</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/act3.jpeg" class="card-img-top" alt="Obra">
+                    <div class="card-body">
+                        <h5 class="card-title">Pinta tu obra favorita</h5>
+                        <a href="#" class="btn btn-primary">Acerca de</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Museo Nacional de Arte. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

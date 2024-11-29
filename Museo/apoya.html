@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoya - Museo Nacional de Arte</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styleexh.css" rel="stylesheet">
+
+    <style>
+        /* Animaciones */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 3;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Estilo para el banner principal */
+        .portada {
+            position: center;
+            background: url('images/dial.jpg') no-repeat center center/cover; /* Imagen de fondo */
+            height: 100vh; /* Ocupa toda la altura de la ventana */
+            color: white; /* Texto blanco */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Fondo translúcido oscuro sobre la imagen */
+        .portada::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo negro translúcido */
+            z-index: 1; /* Por debajo del contenido */
+        }
+
+        /* Contenedor del contenido */
+        .contenido-portada {
+            position: center;
+            z-index: 2; /* Por encima del fondo translúcido */
+            text-align: center;
+        }
+
+        /* Título principal */
+        .titulo-medio h1 {
+            font-size: 3rem; /* Tamaño del texto */
+            font-family: 'PF', sans-serif; /* Usar fuente personalizada */
+            margin-bottom: 1rem;
+            position: center;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        /* Subtítulo */
+        .titulo-medio p {
+            font-size: 1.2rem;
+            margin: 0 auto; /* Centrar texto */
+            max-width: 600px; /* Limitar el ancho */
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Botones */
+        .titulo-medio .btn {
+            font-size: 1rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px; /* Botones redondeados */
+            text-transform: uppercase;
+            font-weight: bold;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        /* Hover en botones */
+        .titulo-medio .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Estilo para el pie de página */
+        footer {
+            background-color: #f4f4f4;  /* Gris claro */
+            color: black;  /* Color de texto negro */
+            padding: 2rem 0;
+        }
+        footer p {
+            margin: 0;
+        }
+        footer img {
+            height: 30px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-index">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/logo-museo.png" alt="Logo Museo" style="height: 50px; margin-right: 15px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="visita.html">Visita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="exhibiciones.html">Exhibiciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="actividades.html">Actividades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="publicaciones.html">Publicaciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="coleccion.html">Colección</a></li>
+                    <li class="nav-item"><a class="nav-link" href="conocemas.html">Conoce más</a></li>
+                    <li class="nav-item"><a class="nav-link" href="apoya.html">Apoya</a></li>
+                </ul>
+            </div> 
+        </div>
+    </nav>
+
+    <!-- Portada -->
+    <header class="portada">
+        <div class="contenido-portada">
+            <!-- Título central -->
+            <div class="titulo-medio">
+                Apoya al Museo Nacional de Arte
+            </div>
+        </div>
+    </header>
+
+    <section class="container my-5">
+        <h2>¿Cómo puedes apoyar?</h2>
+        <p>Tu apoyo es fundamental para que el Museo Nacional de Arte continúe con su labor de preservación, educación y difusión del patrimonio cultural. Hay varias maneras de contribuir al museo y participar en proyectos especiales.</p>
+
+        <h3>Donaciones</h3>
+        <p>Las donaciones son una de las formas más efectivas de ayudar. Tu aporte contribuirá directamente a la conservación de nuestras obras y la creación de nuevas exposiciones.</p>
+
+        <h3>Voluntariado</h3>
+        <p>Si deseas ser parte activa del museo, te invitamos a unirte a nuestros programas de voluntariado, donde podrás ayudar en eventos, actividades educativas y otros proyectos.</p>
+
+        <h3>Patrocinios</h3>
+        <p>Las empresas también pueden apoyar el Museo Nacional de Arte mediante patrocinios, colaborando en exposiciones y eventos especiales. <a href="contacto.html">Contáctanos</a> para más detalles.</p>
+
+        <div class="titulo-medio">
+            <a href="apoya.html" class="btn btn-primary">Haz tu donación ahora</a>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Museo Nacional de Arte. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
