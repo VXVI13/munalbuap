@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conoce Más - Museo Nacional de Arte</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styleexh.css" rel="stylesheet">
+</head>
+<style>
+    /* Estilo para el banner principal */
+    .portada {
+        position: center;
+        background: url('images/dial.jpg') no-repeat center center/cover; /* Imagen de fondo */
+        height: 100vh; /* Ocupa toda la altura de la ventana */
+        color: white; /* Texto blanco */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Fondo translúcido oscuro sobre la imagen */
+    .portada::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo negro translúcido */
+        z-index: 1; /* Por debajo del contenido */
+    }
+
+    /* Contenedor del contenido */
+    .contenido-portada {
+        position: center;
+        z-index: 2; /* Por encima del fondo translúcido */
+        text-align: center;
+    }
+
+    /* Título principal */
+    .titulo-medio h1 {
+        font-size: 3rem; /* Tamaño del texto */
+        font-family: 'PF', sans-serif; /* Usar fuente personalizada */
+        margin-bottom: 1rem;
+        position: center;
+    }
+
+    /* Subtítulo */
+    .titulo-medio p {
+        font-size: 1.2rem;
+        margin: 0 auto; /* Centrar texto */
+        max-width: 600px; /* Limitar el ancho */
+    }
+
+    /* Botones */
+    .titulo-medio .btn {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+        border-radius: 50px; /* Botones redondeados */
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    /* Hover en botones */
+    .titulo-medio .btn:hover {
+        opacity: 0.9;
+    }
+
+    /* Estilo para el pie de página */
+    footer {
+        background-color: #f4f4f4;  /* Gris claro */
+        color: black;  /* Color de texto negro */
+        padding: 2rem 0;
+    }
+    footer p {
+        margin: 0;
+    }
+    footer img {
+        height: 30px;
+        margin: 0 10px;
+    }
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-index">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/logo-museo.png" alt="Logo Museo" style="height: 50px; margin-right: 15px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="visita.html">Visita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="exhibiciones.html">Exhibiciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="actividades.html">Actividades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="publicaciones.html">Publicaciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="conocemas.html">Conoce más</a></li>
+                    <li class="nav-item"><a class="nav-link" href="apoya.html">Apoya</a></li>
+                </ul>
+            </div> 
+        </div>
+    </nav>
+
+    <!-- Portada -->
+    <header class="portada">
+        <div class="contenido-portada">
+            <!-- Título central -->
+            <div class="titulo-medio">
+                Conoce Más
+            </div>
+        </div>
+    </header>
+
+    <section class="container my-5">
+        <h2>Acerca del Museo Nacional de Arte</h2>
+        <p>El Museo Nacional de Arte es un centro cultural de renombre en México, dedicado a preservar y difundir las artes visuales desde la época virreinal hasta la contemporaneidad. A través de sus diversas exhibiciones, actividades y publicaciones, el museo ofrece una experiencia única que conecta al público con la historia y la riqueza del arte mexicano e internacional.</p>
+
+        <h3>Objetivos del Museo</h3>
+        <p>El Museo Nacional de Arte tiene como misión la preservación, promoción y difusión del patrimonio artístico de México, así como la creación de espacios que fomenten la reflexión y el diálogo en torno al arte y la cultura.</p>
+
+        <h3>Visión</h3>
+        <p>Ser un museo líder en la educación artística, impulsando la reflexión crítica y el acceso universal a las artes, convirtiéndose en un referente cultural nacional e internacional.</p>
+
+        <h3>¿Cómo puedes contribuir?</h3>
+        <p>El Museo Nacional de Arte agradece la colaboración de todos sus visitantes y está comprometido con el desarrollo de proyectos que impulsen la conservación del patrimonio cultural. Si deseas contribuir, puedes hacerlo a través de donaciones, voluntariado o apoyo institucional. <a href="apoya.html">Conoce más sobre cómo apoyar</a>.</p>
+
+        <h3>Visítanos</h3>
+        <p>Ubicado en el corazón del Centro Histórico de Ciudad de México, el museo es accesible para todos. Contamos con visitas guiadas, actividades para niños, y eventos especiales. <a href="visita.html">Planifica tu visita aquí.</a></p>
+
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Museo Nacional de Arte. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
